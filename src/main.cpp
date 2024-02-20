@@ -10,6 +10,7 @@ void setup() {
 
 void loop() {
   printf("Welcome to OOP-DeScent ChipSat Software");  
+  printf("test"); 
 } 
 
 // put function definitions here:
