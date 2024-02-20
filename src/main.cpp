@@ -9,8 +9,8 @@ void setup() {
 }
 
 void loop() {
-  printf("Welcome to OOP-DeScent ChipSat Software"); 
-}
+  printf("Welcome to OOP-DeScent ChipSat Software");  
+} 
 
 // put function definitions here:
 int myFunction(int x, int y) {
