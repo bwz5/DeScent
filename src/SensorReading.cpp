@@ -4,6 +4,6 @@ float SensorReading::getCurrentValue(){
     return value; 
 }
 
-bool SensorReading::updateValue(float newValue){
-
+void SensorReading::updateValue(float newValue){
+    value = newValue; 
 }

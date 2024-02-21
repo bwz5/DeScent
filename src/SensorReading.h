@@ -15,8 +15,7 @@ class SensorReading {
         */
         float getCurrentValue(); 
         /**
-         * Tries to update the current value. Returns true if updated and false if 
-         * there is not update. 
+         * Tries to update the current value.
         */
-        bool updateValue(float newValue); 
+        void updateValue(float newValue); 
 }; 
