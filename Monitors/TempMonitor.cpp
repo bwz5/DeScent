@@ -3,17 +3,15 @@
 
 TempMonitor::TempMonitor(){
 
-    initialized = true; 
-
     Wire.begin();
 
     // If that status is false, then there was an error. 
-    unsigned status = bme.begin(); 
-
-    Serial.print("Temperature Sensor Initialized"); 
-    
+    unsigned status = bme.begin();     
     if (!status){
         Serial.print("Can not find the Temperature sensor"); 
+    } else {
+        initialized = true; 
+        Serial.print("Temperature Sensor Initialized"); 
     }
 }
 

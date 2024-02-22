@@ -2,14 +2,13 @@
 #include "sfr.h"
 
 void MainControlLoop::execute(){
-    //Execute all of the monitor's tasks 
-    tempMonitor.execute(); 
-
     //Will store the current sensor's value that is being read
     float value; 
 
     // Print the Temperature Monitor Values
-    if (tempMonitor.checkInitialization()){
+    if (tempMonitor.checkInitialization()){ 
+        tempMonitor.execute(); 
+
         Serial.println("Temperature Monitor Values: "); 
 
         sfr::BME280::altitude->getValue(&value); 
