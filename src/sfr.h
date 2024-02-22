@@ -11,10 +11,10 @@ namespace sfr {
      * Contains the states for the BME280 Humidity and Temperature Sensor
     */
     namespace BME280 { 
-        SensorReading *temp_c; 
-        SensorReading *pressure; 
-        SensorReading *altitude; 
-        SensorReading *humidity; 
+        extern SensorReading *temp_c; 
+        extern SensorReading *pressure; 
+        extern SensorReading *altitude; 
+        extern SensorReading *humidity; 
     }; 
     /**
      * Contains the states for the MAX-M10S-00B GPS 

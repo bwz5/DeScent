@@ -18,4 +18,8 @@ class SensorReading {
          * Updates the changeValue to what our current value field is.
         */
         void getValue(float *changeValue); 
+        /**
+         * Creates a SensorReading object
+        */
+       SensorReading(); 
 }; 
