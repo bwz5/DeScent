@@ -13,9 +13,9 @@ class SensorReading {
         /**
          * Returns the current value field 
         */
-        float getCurrentValue(); 
+        void setValue(float newValue); 
         /**
-         * Tries to update the current value.
+         * Updates the changeValue to what our current value field is.
         */
-        void updateValue(float newValue); 
+        void getValue(float *changeValue); 
 }; 
