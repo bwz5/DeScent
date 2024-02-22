@@ -11,7 +11,7 @@ class SensorReading {
         float value; 
     public: 
         /**
-         * Returns the current value field 
+         * Sets the value to the newValue
         */
         void setValue(float newValue); 
         /**
