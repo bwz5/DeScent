@@ -30,4 +30,37 @@ void MainControlLoop::execute(){
     } else {
         Serial.print("Temperature Sensor not Initialized"); 
     }
+    if (imuMonitor.intialized()){
+        imuMonitor.exceute();
+
+        Serial.println("IMU Values: "); 
+
+        sfr::BNO085::Acc_x->getValue(&value);
+        Serial.print("Accelerometer (x,y,z) : ");
+        Serial.println(value);
+        sfr::BNO085::Acc_y->getValue(&value);
+        Serial.println(value);
+        sfr::BNO085::Acc_z->getValue(&value);
+        Serial.println(value);
+
+        sfr::BNO085::Gryo_x->getValue(&value);
+        Serial.print("Gyroscope (x,y,z) : ");
+        Serial.println(value);
+        sfr::BNO085::Gryo_y->getValue(&value);
+        Serial.println(value);
+        sfr::BNO085::Gryo_z->getValue(&value);
+        Serial.println(value);
+
+        sfr::BNO085::Magn_x->getValue(&value);
+        Serial.print("Magnetometer (x,y,z) : ");
+        Serial.println(value);
+        sfr::BNO085::Magn_y->getValue(&value);
+        Serial.println(value);
+        sfr::BNO085::Magn_z->getValue(&value);
+        Serial.println(value);
+
+    }
+    else{
+        Serial.print("IMU not Initialized"); 
+    }
 }

@@ -32,7 +32,15 @@ namespace sfr {
      * Contains the states for the BNO085 IMU
     */
     namespace BNO085{
-        
+        extern SensorReading *Acc_x;
+        extern SensorReading *Acc_y;
+        extern SensorReading *Acc_z;
+        extern SensorReading *Gryo_x;
+        extern SensorReading *Gryo_y;
+        extern SensorReading *Gryo_z;
+        extern SensorReading *Magn_x;
+        extern SensorReading *Magn_y;
+        extern SensorReading *Magn_z;
     }; 
 }; 
 
