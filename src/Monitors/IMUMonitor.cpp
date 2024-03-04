@@ -1,5 +1,5 @@
 #include "IMUMonitor.h"
-#include "../src/sfr.h"
+#include "sfr.h"
 
 sh2_SensorValue_t sensorValue;
 
@@ -15,10 +15,10 @@ IMUMonitor::IMUMonitor(){
   reports();
   }
 }
-void execute(){
+void IMUMonitor::exceute(){
     if (sensor.wasReset()) {
     Serial.print("sensor was reset ");
-    setReports();
+    // setReports();
     }
     if (!sensor.getSensorEvent(&sensorValue)) {
     return;
@@ -26,24 +26,24 @@ void execute(){
     switch (sensorValue.sensorId) {
 
     case SH2_ACCELEROMETER:
-      stf::BNO085 :: Acc_x -> setValue(sensorValue.un.accelerometer.x);
-      stf::BNO085 :: Acc_y -> setValue(sensorValue.un.accelerometer.y);
-      stf::BNO085 :: Acc_z -> setValue(sensorValue.un.accelerometer.z);
+      sfr::BNO085 :: Acc_x -> setValue(sensorValue.un.accelerometer.x);
+      sfr::BNO085 :: Acc_y -> setValue(sensorValue.un.accelerometer.y);
+      sfr::BNO085 :: Acc_z -> setValue(sensorValue.un.accelerometer.z);
       break;
     case SH2_GYROSCOPE_CALIBRATED:
-      stf::BNO085 :: Gryo_x -> setValue(sensorValue.un.gyroscope.x);
-      stf::BNO085 :: Gryo_y -> setValue(sensorValue.un.gyroscope.y);
-      stf::BNO085 :: Gryo_z -> setValue(sensorValue.un.gyroscope.z);
+      sfr::BNO085 :: Gryo_x -> setValue(sensorValue.un.gyroscope.x);
+      sfr::BNO085 :: Gryo_y -> setValue(sensorValue.un.gyroscope.y);
+      sfr::BNO085 :: Gryo_z -> setValue(sensorValue.un.gyroscope.z);
       break;
     case SH2_MAGNETIC_FIELD_CALIBRATED:
-      stf::BNO085 :: Magn_x -> setValue(sensorValue.un.magneticField.x);
-      stf::BNO085 :: Magn_y -> setValue(sensorValue.un.magneticField.y);
-      stf::BNO085 :: Magn_z -> setValue(sensorValue.un.magneticField.z);
+      sfr::BNO085 :: Magn_x -> setValue(sensorValue.un.magneticField.x);
+      sfr::BNO085 :: Magn_y -> setValue(sensorValue.un.magneticField.y);
+      sfr::BNO085 :: Magn_z -> setValue(sensorValue.un.magneticField.z);
       break;
     }
 }
 
-void reports(void){
+void IMUMonitor::reports(void){
     Serial.println("Setting desired reports");
     if (!sensor.enableReport(SH2_ACCELEROMETER)) {
     Serial.println("Could not enable accelerometer");
@@ -56,6 +56,6 @@ void reports(void){
     }
 }
 
-bool intialized(void){
+bool IMUMonitor::intialized(void){
     return intialization;
 }
