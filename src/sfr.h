@@ -20,7 +20,9 @@ namespace sfr {
      * Contains the states for the MAX-M10S-00B GPS 
     */
     namespace GPS {
-
+        extern SensorReading *latitude; 
+        extern SensorReading *longitude; 
+        extern SensorReading *altitude; 
     }
     /**
      * Contains the states for the SX1276 LoRa

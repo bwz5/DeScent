@@ -17,6 +17,9 @@ namespace sfr {
      * Contains the states for the MAX-M10S-00B GPS 
     */
     namespace GPS {
+        SensorReading *latitude = new SensorReading(); 
+        SensorReading *longitude = new SensorReading(); 
+        SensorReading *altitude = new SensorReading(); 
 
     }
     /**

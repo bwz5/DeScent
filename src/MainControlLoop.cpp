@@ -51,16 +51,17 @@ void MainControlLoop::execute(){
         sfr::BNO085::Gryo_z->getValue(&value);
         Serial.println(value);
 
-        sfr::BNO085::Magn_x->getValue(&value);
-        Serial.print("Magnetometer (x,y,z) : ");
-        Serial.println(value);
-        sfr::BNO085::Magn_y->getValue(&value);
-        Serial.println(value);
-        sfr::BNO085::Magn_z->getValue(&value);
-        Serial.println(value);
+        // sfr::BNO085::Magn_x->getValue(&value);
+        // Serial.print("Magnetometer (x,y,z) : ");
+        // Serial.println(value);
+        // sfr::BNO085::Magn_y->getValue(&value);
+        // Serial.println(value);
+        // sfr::BNO085::Magn_z->getValue(&value);
+        // Serial.println(value);
 
     }
     else{
         Serial.print("IMU not Initialized"); 
     }
+
 }
