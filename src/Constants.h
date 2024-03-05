@@ -3,7 +3,8 @@
 */
 namespace pins {
     namespace BME280 { 
-        
+
+
     }; 
     namespace GPS {
 
@@ -12,6 +13,5 @@ namespace pins {
 
     };
     namespace BNO085{
-        
     }; 
 }; 

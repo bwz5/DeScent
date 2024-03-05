@@ -35,9 +35,9 @@ namespace sfr {
          SensorReading *Gryo_x = new SensorReading(); 
          SensorReading *Gryo_y = new SensorReading(); 
          SensorReading *Gryo_z = new SensorReading(); 
-         SensorReading *Magn_x = new SensorReading(); 
-         SensorReading *Magn_y = new SensorReading(); 
-         SensorReading *Magn_z = new SensorReading(); 
+        //  SensorReading *Magn_x = new SensorReading(); 
+        //  SensorReading *Magn_y = new SensorReading(); 
+        //  SensorReading *Magn_z = new SensorReading(); 
         
     }; 
 }; 

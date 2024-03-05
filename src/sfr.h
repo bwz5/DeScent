@@ -38,9 +38,9 @@ namespace sfr {
         extern SensorReading *Gryo_x;
         extern SensorReading *Gryo_y;
         extern SensorReading *Gryo_z;
-        extern SensorReading *Magn_x;
-        extern SensorReading *Magn_y;
-        extern SensorReading *Magn_z;
+        // extern SensorReading *Magn_x;
+        // extern SensorReading *Magn_y;
+        // extern SensorReading *Magn_z;
     }; 
 }; 
 
