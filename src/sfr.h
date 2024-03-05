@@ -22,7 +22,7 @@ namespace sfr {
     namespace GPS {
         extern SensorReading *latitude; 
         extern SensorReading *longitude; 
-        // extern SensorReading *altitude; 
+        //extern SensorReading *altitude; 
     }
     /**
      * Contains the states for the SX1276 LoRa

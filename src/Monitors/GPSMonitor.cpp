@@ -5,7 +5,7 @@
 void GPSMonitor::execute(){
     sfr::GPS::longitude->setValue(gps.getLongitude()); 
     sfr::GPS::latitude->setValue(gps.getLatitude()); 
-    // sfr::GPS::altitude->setValue(gps.getAltitude());
+    //sfr::GPS::altitude->setValue(gps.getAltitude());
 }
 
 GPSMonitor::GPSMonitor(){
