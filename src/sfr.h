@@ -13,8 +13,8 @@ namespace sfr {
     namespace BME280 { 
         extern SensorReading *temp_c; 
         extern SensorReading *pressure; 
-        extern SensorReading *altitude; 
-        extern SensorReading *humidity; 
+        // extern SensorReading *altitude; 
+        // extern SensorReading *humidity; 
     }; 
     /**
      * Contains the states for the MAX-M10S-00B GPS 
@@ -22,7 +22,7 @@ namespace sfr {
     namespace GPS {
         extern SensorReading *latitude; 
         extern SensorReading *longitude; 
-        extern SensorReading *altitude; 
+        // extern SensorReading *altitude; 
     }
     /**
      * Contains the states for the SX1276 LoRa

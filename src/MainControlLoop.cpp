@@ -11,17 +11,17 @@ void MainControlLoop::execute(){
 
         Serial.println("Temperature Monitor Values: "); 
 
-        sfr::BME280::altitude->getValue(&value); 
-        Serial.print("Altitude: "); 
-        Serial.println(value);
+        // sfr::BME280::altitude->getValue(&value); 
+        // Serial.print("Altitude: "); 
+        // Serial.println(value);
 
         sfr::BME280::temp_c->getValue(&value); 
         Serial.print("Temperature in Celsius "); 
         Serial.println(value);
 
-        sfr::BME280::humidity->getValue(&value); 
-        Serial.print("Humidity: "); 
-        Serial.println(value);
+        // sfr::BME280::humidity->getValue(&value); 
+        // Serial.print("Humidity: "); 
+        // Serial.println(value);
 
         sfr::BME280::pressure->getValue(&value); 
         Serial.print("Pressure from Sea Level: "); 
