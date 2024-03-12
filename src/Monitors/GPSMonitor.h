@@ -1,11 +1,14 @@
+#include <TinyGPSPlus.h>
+#include <SoftwareSerial.h>
 
 
-#define GPSCS 1// the Chip select pin
+SoftwareSerial ss(0x00,0x01); 
 
 class GPSMonitor {
     private:
         bool initialized = false; 
-        
+        TinyGPSPlus gps; 
+
     public: 
         /**
          * Begin reading from the sensor

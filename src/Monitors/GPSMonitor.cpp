@@ -1,25 +1,18 @@
-#include <SPI.h>
+
 #include "GPSMonitor.h"
 #include "sfr.h"
 
 void GPSMonitor::execute(){
-    // sfr::GPS::longitude->setValue(gps.getLongitude()); 
-    // sfr::GPS::latitude->setValue(gps.getLatitude()); 
-    //sfr::GPS::altitude->setValue(gps.getAltitude());
+    while (ss.available()){
+        gps.encode(ss.read());
+    }
+    sfr::GPS::longitude->setValue(gps.location.lng()); 
+    sfr::GPS::latitude->setValue(gps.location.lat()); 
+    sfr::GPS::altitude->setValue(gps.altitude.meters());
 }
 
 GPSMonitor::GPSMonitor(){
-    SPI.begin();
-
-    // while (1) {
-    //     if (gps.begin(GPSCS) == false){
-    //         Serial.println("GPS not initialized, retrying..."); 
-    //     } else {
-    //         Serial.println("GPS Sensor is initialized"); 
-    //         initialized = true; 
-    //         break; 
-    //     }
-    // }
+    ss.begin(9600); 
 }
 
 bool GPSMonitor::checkInitialization(){

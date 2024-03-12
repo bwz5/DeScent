@@ -19,7 +19,7 @@ namespace sfr {
     namespace GPS {
         SensorReading *latitude = new SensorReading(); 
         SensorReading *longitude = new SensorReading(); 
-        //SensorReading *altitude = new SensorReading(); 
+        SensorReading *altitude = new SensorReading(); 
 
     }
     /**
