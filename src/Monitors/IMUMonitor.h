@@ -3,7 +3,8 @@
 */
 
 # pragma once
-#include <Adafruit_BNO08x.h>
+#include <SparkFun_BNO080_Arduino_Library.h>
+#include <Wire.h>
 
 class IMUMonitor{
     private:
@@ -12,7 +13,7 @@ class IMUMonitor{
     bool intialization = false;
 
     //State variable to hold the current event of the IMU
-    Adafruit_BNO08x sensor; 
+    BNO080 sensor; 
     public:
 
         /*

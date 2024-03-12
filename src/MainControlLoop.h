@@ -1,6 +1,6 @@
 #include "Monitors/TempMonitor.h"
 #include "Monitors/IMUMonitor.h"
-#include "Monitors/GPSMonitor.h"
+// #include "Monitors/GPSMonitor.h"
 
 class MainControlLoop {
     private:
