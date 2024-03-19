@@ -1,23 +1,26 @@
-// #include <SparkFun_u-blox_GNSS_v3.h>
+#include <TinyGPSPlus.h>
+#include <SoftwareSerial.h>
 
+const int RxPin = 0x00; 
+const int TxPin = 0x01; 
 
-// #define GPSCS 1// the Chip select pin
+class GPSMonitor{
+    private:
+        bool initialized = false; 
+        TinyGPSPlus gps; 
+        SoftwareSerial ss; 
 
-// class GPSMonitor {
-//     private:
-//         bool initialized = false; 
-//         SFE_UBLOX_GNSS_SPI gps; 
-//     public: 
-//         /**
-//          * Begin reading from the sensor
-//         */
-//         void execute(); 
-//         /**
-//          * Initialize the SPI Protocol
-//         */
-//         GPSMonitor(); 
-//         /**
-//          * Checks if the sensor has been initialized
-//         */
-//        bool checkInitialization(); 
-// }; 
+    public: 
+        /**
+         * Begin reading from the sensor
+        */
+        void execute(); 
+        /**
+         * Initialize the SPI Protocol
+        */
+        GPSMonitor() ; 
+        /**
+         * Checks if the sensor has been initialized
+        */
+       bool checkInitialization(); 
+}; 
