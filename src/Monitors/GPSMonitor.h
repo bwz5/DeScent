@@ -16,7 +16,7 @@ class GPSMonitor{
         */
         void execute(); 
         /**
-         * Initialize the SPI Protocol
+         * Initialize Software Serial 
         */
         GPSMonitor() ; 
         /**
