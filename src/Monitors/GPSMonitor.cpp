@@ -15,6 +15,6 @@ GPSMonitor::GPSMonitor(): ss(RxPin,TxPin){
     ss.begin(9600); 
 }
 
-// bool GPSMonitor::checkInitialization(){
-//     return initialized;
-// }
+bool GPSMonitor::checkInitialization(){
+    return initialized;
+}
