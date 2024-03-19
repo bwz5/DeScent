@@ -11,7 +11,7 @@ void GPSMonitor::execute(){
     sfr::GPS::altitude->setValue(gps.altitude.meters());
 }
 
-GPSMonitor::GPSMonitor(){
+GPSMonitor::GPSMonitor(): ss(RxPin,TxPin){
     ss.begin(9600); 
 }
 
