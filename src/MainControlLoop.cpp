@@ -64,24 +64,24 @@ void MainControlLoop::execute(){
         Serial.print("IMU not Initialized"); 
     }
 
-    // if (gpsMonitor.checkInitialization()){
-    //     gpsMonitor.execute(); 
+    if (gpsMonitor.checkInitialization()){
+        gpsMonitor.execute(); 
 
-    //     Serial.println("GPS Values: "); 
+        Serial.println("GPS Values: "); 
 
-    //     sfr::GPS::latitude->getValue(&value); 
-    //     Serial.print("GPS Latitude: "); 
-    //     Serial.println(value); 
+        sfr::GPS::latitude->getValue(&value); 
+        Serial.print("GPS Latitude: "); 
+        Serial.println(value); 
 
-    //     sfr::GPS::longitude->getValue(&value); 
-    //     Serial.print("GPS Longitude: "); 
-    //     Serial.println(value); 
+        sfr::GPS::longitude->getValue(&value); 
+        Serial.print("GPS Longitude: "); 
+        Serial.println(value); 
 
-    //     sfr::GPS::altitude->getValue(&value); 
-    //     Serial.print("GPS Altitude: "); 
-    //     Serial.println(value);
-    // } else {
-    //     Serial.print("GPS not Initialized"); 
-    // }
+        sfr::GPS::altitude->getValue(&value); 
+        Serial.print("GPS Altitude: "); 
+        Serial.println(value);
+    } else {
+        Serial.print("GPS not Initialized"); 
+    }
 
 }

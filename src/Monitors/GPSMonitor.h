@@ -11,16 +11,10 @@ class GPSMonitor{
         SoftwareSerial ss; 
 
     public: 
-        /**
-         * Begin reading from the sensor
-        */
+        /*Begin reading from the sensor*/
         void execute(); 
-        /**
-         * Initialize Software Serial 
-        */
+        /* Initialize SoftwareSerial */
         GPSMonitor() ; 
-        /**
-         * Checks if the sensor has been initialized
-        */
+        /*Checks if the sensor has been initialized */
        bool checkInitialization(); 
 }; 
