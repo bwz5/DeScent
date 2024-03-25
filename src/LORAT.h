@@ -11,7 +11,7 @@
 class LORA{
     private: 
         bool start = LoRa.begin(915E6); 
-        int frequency = 915E6; 
+        double frequency = 915E6; 
     // SX1278 has the following pin order:
     // Module(NSS/CS, DIO0, RESET, DIO1)
     // SX1278 radio = new Module(10, 2, 9, 3);
